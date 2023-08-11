@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>ArchSmarter_Addin_Bootcamp_v2 - Command 1</Text>
+    <Description>Some description for ArchSmarter_Addin_Bootcamp_v2</Description>
+    <Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>
+    <FullClassName>ArchSmarter_Addin_Bootcamp_v2.Command1</FullClassName>
+    <ClientId>48a8351f-5a03-4f54-9d31-31a4f854068e</ClientId>
+    <VendorId>com.RIDGEANDPARTNERS</VendorId>
+    <VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>ArchSmarter_Addin_Bootcamp_v2 - Command 2</Text>
+    <Description>Some description for ArchSmarter_Addin_Bootcamp_v2</Description>
+    <Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>
+    <FullClassName>ArchSmarter_Addin_Bootcamp_v2.Command2</FullClassName>
+    <ClientId>463e6187-41d9-472d-ac6e-479c2afc2198</ClientId>
+    <VendorId>com.RIDGEANDPARTNERS</VendorId>
+    <VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+	<AddIn Type="Command">
+		<Text>ArchSmarter_Addin_Bootcamp_v2 - Module01Challenge</Text>
+		<Description>Some description for ArchSmarter_Addin_Bootcamp_v2</Description>
+		<Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>
+		<FullClassName>ArchSmarter_Addin_Bootcamp_v2.Module01Challenge</FullClassName>
+		<ClientId>B122B925-D344-4F33-8C43-5186E155E9E9</ClientId>
+		<VendorId>com.RIDGEANDPARTNERS</VendorId>
+		<VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
+	</AddIn>
+	<AddIn Type="Command">
+		<Text>ArchSmarter_Addin_Bootcamp_v2 - Module02Challenge</Text>
+		<Description>Some description for ArchSmarter_Addin_Bootcamp_v2</Description>
+		<Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>
+		<FullClassName>ArchSmarter_Addin_Bootcamp_v2.Module02Challenge</FullClassName>
+		<ClientId>52226DF9-8D4D-4D94-9D19-D9020A5C5E64</ClientId>
+		<VendorId>com.RIDGEANDPARTNERS</VendorId>
+		<VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
+	</AddIn>
+	<AddIn Type="Application">
+    <Name>ArchSmarter_Addin_Bootcamp_v2</Name>
+    <Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>
+    <FullClassName>ArchSmarter_Addin_Bootcamp_v2.App</FullClassName>
+    <ClientId>f931d9fa-0f4f-4db2-8739-c871bd285155</ClientId>
+    <VendorId>com.RIDGEANDPARTNERS</VendorId>
+    <VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>

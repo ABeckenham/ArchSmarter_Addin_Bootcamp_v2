@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchSmarter_Addin_Bootcamp_v2", "ArchSmarter_Addin_Bootcamp_v2\ArchSmarter_Addin_Bootcamp_v2.csproj", "{48A8351F-5A03-4F54-9D31-31A4F854068E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		2021Debug|Any CPU = 2021Debug|Any CPU
+		2021Release|Any CPU = 2021Release|Any CPU
+		2022Debug|Any CPU = 2022Debug|Any CPU
+		2022Release|Any CPU = 2022Release|Any CPU
+		2023Debug|Any CPU = 2023Debug|Any CPU
+		2023Release|Any CPU = 2023Release|Any CPU
+		2024Debug|Any CPU = 2024Debug|Any CPU
+		2024Release|Any CPU = 2024Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2021Debug|Any CPU.ActiveCfg = 2021Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2021Debug|Any CPU.Build.0 = 2021Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2021Release|Any CPU.ActiveCfg = 2021Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2021Release|Any CPU.Build.0 = 2021Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2022Debug|Any CPU.ActiveCfg = 2022Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2022Debug|Any CPU.Build.0 = 2022Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2022Release|Any CPU.ActiveCfg = 2022Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2022Release|Any CPU.Build.0 = 2022Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2023Debug|Any CPU.ActiveCfg = 2023Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2023Debug|Any CPU.Build.0 = 2023Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2023Release|Any CPU.ActiveCfg = 2023Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2023Release|Any CPU.Build.0 = 2023Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2024Debug|Any CPU.ActiveCfg = 2024Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2024Debug|Any CPU.Build.0 = 2024Debug|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2024Release|Any CPU.ActiveCfg = 2024Release|Any CPU
+		{48A8351F-5A03-4F54-9D31-31A4F854068E}.2024Release|Any CPU.Build.0 = 2024Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86133DA1-1274-4114-8CF2-94DC16F2C41C}
+	EndGlobalSection
+EndGlobal
