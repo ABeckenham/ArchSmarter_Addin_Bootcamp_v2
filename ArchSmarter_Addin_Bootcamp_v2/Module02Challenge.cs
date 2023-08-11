@@ -110,15 +110,13 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 }
                 t.Commit();
 
-            }
-            //BONUS - create a custom method to "get wall type by name", "get system type by name", DONE
-            //"create wall", "create pipe", "crate duct"
+            }           
 
             return Result.Succeeded;
         }
 
 
-        //my methods below
+        //my methods below - create duct, pipe, wall, and systemtypes
         
         private static Level GetLevelbyName(Document doc, string LevelName)
         {
@@ -132,8 +130,7 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             }
             return null;
         }
-
-        
+                
         internal WallType GetWallTypeByName(Document doc, String typeName)
         {
             FilteredElementCollector collector = new FilteredElementCollector(doc);
@@ -148,7 +145,6 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             }
             return null;
         }
-
 
         internal MEPSystemType GetSystemTypeByName(Document doc, string typeName)
         {
