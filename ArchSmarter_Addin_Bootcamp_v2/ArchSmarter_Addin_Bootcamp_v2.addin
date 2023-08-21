@@ -36,6 +36,15 @@
 		<VendorId>com.RIDGEANDPARTNERS</VendorId>
 		<VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
 	</AddIn>
+	<AddIn Type="Command">
+		<Text>ArchSmarter_Addin_Bootcamp_v2 - Module03Challenge</Text>
+		<Description>Some description for ArchSmarter_Addin_Bootcamp_v2</Description>
+		<Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>
+		<FullClassName>ArchSmarter_Addin_Bootcamp_v2.Module03Challenge</FullClassName>
+		<ClientId>32AF593F-CDCC-41BF-B67D-52D53945BB18</ClientId>
+		<VendorId>com.RIDGEANDPARTNERS</VendorId>
+		<VendorDescription>RIDGEANDPARTNERS, YOUR COMPANY URL</VendorDescription>
+	</AddIn>
 	<AddIn Type="Application">
     <Name>ArchSmarter_Addin_Bootcamp_v2</Name>
     <Assembly>ArchSmarter_Addin_Bootcamp_v2.dll</Assembly>

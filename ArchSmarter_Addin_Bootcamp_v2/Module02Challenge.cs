@@ -58,15 +58,15 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             //why is this not working?
 
             //Get type using methods
-            Level theLevel = GetLevelbyName(doc, "Level !");
+            Level theLevel = Utils.GetLevelbyName(doc, "Level !");
 
-            Element projDuct = GetDuctTypeByName(doc,"Default");
-            Element projPipe = GetPipeTypeByName(doc, "Default");                       
+            Element projDuct = Utils.GetDuctTypeByName(doc,"Default");
+            Element projPipe = Utils.GetPipeTypeByName(doc, "Default");                       
 
-            WallType genWall = GetWallTypeByName(doc, @"Generic - 8""");
-            WallType storeWall = GetWallTypeByName(doc, "Storefront");
-            MEPSystemType ductSystemType = GetSystemTypeByName(doc, "Supply Air");
-            MEPSystemType pipeSystemType = GetSystemTypeByName(doc, "Domestic Hot Water");
+            WallType genWall = Utils.GetWallTypeByName(doc, @"Generic - 8""");
+            WallType storeWall = Utils.GetWallTypeByName(doc, "Storefront");
+            MEPSystemType ductSystemType = Utils.GetSystemTypeByName(doc, "Supply Air");
+            MEPSystemType pipeSystemType = Utils.GetSystemTypeByName(doc, "Domestic Hot Water");
 
             //create transaction with using statement
 
@@ -118,78 +118,7 @@ namespace ArchSmarter_Addin_Bootcamp_v2
 
         //my methods below - create duct, pipe, wall, and systemtypes
         
-        private static Level GetLevelbyName(Document doc, string LevelName)
-        {
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            collector.OfClass(typeof(Level));
-            collector.WhereElementIsElementType();
-            foreach (Level level in collector)
-            {
-                if (level.Name == LevelName)
-                    return level;
-            }
-            return null;
-        }
-                
-        internal WallType GetWallTypeByName(Document doc, String typeName)
-        {
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            collector.OfClass(typeof(WallType));
-
-            foreach (WallType curType in collector)
-            {
-                if (curType.Name == typeName)
-                {
-                    return curType;
-                }
-            }
-            return null;
-        }
-
-        internal MEPSystemType GetSystemTypeByName(Document doc, string typeName)
-        {
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            collector.OfClass(typeof(MEPSystemType));
-
-            foreach (MEPSystemType curType in collector)
-            {
-                if (curType.Name == typeName)
-                {
-                    return curType;
-                }
-            }
-            return null;
-        }
-
-        internal MEPSystemType GetDuctTypeByName(Document doc, string typeName)
-        {
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            collector.OfClass(typeof(DuctType));
-
-            foreach (MEPSystemType curType in collector)
-            {
-                if (curType.Name == typeName)
-                {
-                    return curType;
-                }
-            }
-            return null;
-        }
-
-        internal MEPSystemType GetPipeTypeByName(Document doc, string typeName)
-        {
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            collector.OfClass(typeof(PipeType));
-
-            foreach (MEPSystemType curType in collector)
-            {
-                if (curType.Name == typeName)
-                {
-                    return curType;
-                }
-            }
-            return null;
-        }
+        
 
         internal static PushButtonData GetButtonData()
         {
