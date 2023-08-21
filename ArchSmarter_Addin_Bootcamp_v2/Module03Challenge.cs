@@ -60,9 +60,8 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 fTypeList.Add(ZZ);
             }
             //remove first line as that is the titles
+
             
-
-
             //!!!! GET ALL FURNITURE SETS
             //get furniture sets as array
             IList<string[]> setArray = GetFurnitureSets();
@@ -75,33 +74,33 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 string FuSet = fs[0];
                 string roomType = fs[1];
                 string sList = fs[2];
-                                
+
                 //make a list to store the list of furniture as a string
-                List<string> STlist = new List<string>();
-                    
+                //List<string> STlist = new List<string>();
+                
                 string[] SArray = sList.Split(',');
+                
                 
                 List<FurnitureType> ZZlist = new List<FurnitureType>();
                 // build list of Furniture in string
 
-                foreach (string S in SArray)
+                foreach (string s in SArray)
                 {
-                    S.Trim();
-                    FurnitureType.Name = S;
-                    
-                        ZZlist.Add(S);
-                    
-                    
+                    string t = s.Trim();
 
-                    
-
+                    foreach (FurnitureType XX in fTypeList) 
+                    {
+                        if (t == XX.Name)
+                        {
+                            ZZlist.Add(XX);
+                        } 
+                    }
                 }
+                
                 //array of strings, convert strings into FurnitureTypes by name
-
                 //name of set, name of room, list of Furniture Names
                 FurnitureSet ZZ = new FurnitureSet(FuSet, roomType, ZZlist);
                 fSetList.Add(ZZ);
-
 
             }
 
@@ -109,7 +108,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             //note that rooms is not a class is it a part of the SpatialElement class
             FilteredElementCollector collector = new FilteredElementCollector(doc);
             collector.OfCategory(BuiltInCategory.OST_Rooms);
-                       
+
+            FilteredElementCollector Famcollector = new FilteredElementCollector(doc);
+            Famcollector.OfCategory(BuiltInCategory.OST_Furniture).OfClass(typeof(FamilySymbol));
 
             using (Transaction t = new Transaction(doc))
             {
@@ -117,38 +118,40 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 {
                     // active family symbol, sometimes the family is not active in the memory
                     //familysymbol.Activate();
-
+                    
                     foreach (SpatialElement room in collector)
                     {
                         List<FamilySymbol> families = new List<FamilySymbol>();
-                        string CurRoom = room.Name;
-                                                
+                        List<FurnitureType> FTList = new List<FurnitureType>();
+                        
+                        string CurRoomSet = Utils.GetParameterValueAsString(room, "Furniture Set");  
+                        
+                        //find the matching furniture set
                         foreach(FurnitureSet FS in fSetList)
-                        { 
-                           //if the furnitureset room name is equal to the current room
-                            if (CurRoom == FS.RoomType)
+                        {//if the furnitureset name and roomtype is equal to the current room
+                            if (CurRoomSet == FS.Name)
                             {   // get the furniture types from the includedfurniturelist
-                                List<FurnitureType> ftCurList = new List<FurnitureType>();
-
-                                foreach(FurnitureType s in FS.IncludedFurnitureList)
-                                {
-                                    ftCurList.Add(s);
-                                }
-
-                                //now we have a list of furnituretypes, we need to get the familysymbols that match
-                                foreach(FurnitureType FT in ftCurList)
-                                {
-                                    string famName = FT.Family;//family name;
-                                    string fsName = FT.Type;//FamilySymbol Name;
-
-                                    FamilySymbol ss = Utils.GetFamilySymbolByName(doc, famName, fsName);
-                                    families.Add(ss);
-                                }
-                                                                
+                                FTList = FS.IncludedFurnitureList;
                             }
-                             
-                        }
+                            //now we have a list of furnituretypes, we need to get the familysymbols that match
+                            foreach (FurnitureType FT in FTList)
+                            {
+                                string famName = FT.Family;//family name as string
+                                string fsName = FT.Type;//FamilySymbol Name as string
 
+                                foreach (FamilySymbol FamSym in Famcollector)
+                                {
+                                   FamSym.Activate();
+                                   string FamSymType = FamSym.Name;
+
+                                   if (famName == FamSym.FamilyName && fsName == FamSym.Name)
+                                   { 
+                                        FamilySymbol ss = Utils.GetFamilySymbolByName(doc, famName, fsName);
+                                        families.Add(ss);
+                                   }
+                                }
+                            }
+                        }
                         //locations can be a location point or curve, it depends what your using
                         //use lookup to check which type of location the element has
                         LocationPoint loc = room.Location as LocationPoint;
@@ -156,9 +159,10 @@ namespace ArchSmarter_Addin_Bootcamp_v2
 
                         foreach (FamilySymbol Sym in families)
                         {
-                            FamilyInstance curFI = doc.Create.NewFamilyInstance(roomPoint,Sym,StructuralType.NonStructural);
+                            FamilyInstance curFI = doc.Create.NewFamilyInstance(roomPoint, Sym, StructuralType.NonStructural);
                         }
- 
+
+
                     }
                 }
                 t.Commit();
