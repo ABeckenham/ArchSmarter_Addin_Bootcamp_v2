@@ -43,6 +43,7 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             IList<string[]> typeArray = GetFurnitureTypes();
             //getting the furniture from the furniture types list. 
             typeArray.RemoveAt(0);
+
             foreach (string[] fs in typeArray) 
             {
                 // get each string list in the tuple
@@ -57,6 +58,7 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 string FType = fs[2];
 
                 FurnitureType ZZ = new FurnitureType(FuName, FaName, FType);
+                // M - FurnitureType ZZ = new FurnitureType(fs[0], fs[1], fs[2]);
                 fTypeList.Add(ZZ);
             }
             //remove first line as that is the titles
@@ -86,11 +88,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2
 
                 foreach (string s in SArray)
                 {
-                    string t = s.Trim();
-
                     foreach (FurnitureType XX in fTypeList) 
                     {
-                        if (t == XX.Name)
+                        if (s.Trim() == XX.Name)
                         {
                             ZZlist.Add(XX);
                         } 
@@ -124,45 +124,54 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                         List<FamilySymbol> families = new List<FamilySymbol>();
                         List<FurnitureType> FTList = new List<FurnitureType>();
                         
-                        string CurRoomSet = Utils.GetParameterValueAsString(room, "Furniture Set");  
-                        
+                        string CurRoomSet = Utils.GetParameterValueAsString(room, "Furniture Set");
+
                         //find the matching furniture set
-                        foreach(FurnitureSet FS in fSetList)
+                        foreach (FurnitureSet FS in fSetList)
                         {//if the furnitureset name and roomtype is equal to the current room
                             if (CurRoomSet == FS.Name)
                             {   // get the furniture types from the includedfurniturelist
                                 FTList = FS.IncludedFurnitureList;
-                            }
-                            //now we have a list of furnituretypes, we need to get the familysymbols that match
-                            foreach (FurnitureType FT in FTList)
-                            {
-                                string famName = FT.Family;//family name as string
-                                string fsName = FT.Type;//FamilySymbol Name as string
 
-                                foreach (FamilySymbol FamSym in Famcollector)
+                                //now we have a list of furnituretypes, we need to get the familysymbols that match
+                                foreach (FurnitureType FT in FTList)
                                 {
-                                   FamSym.Activate();
-                                   string FamSymType = FamSym.Name;
+                                    string famName = FT.Family;//family name as string
+                                    string fsName = FT.Type;//FamilySymbol Name as string
 
-                                   if (famName == FamSym.FamilyName && fsName == FamSym.Name)
-                                   { 
-                                        FamilySymbol ss = Utils.GetFamilySymbolByName(doc, famName, fsName);
-                                        families.Add(ss);
-                                   }
+                                    foreach (FamilySymbol FamSym in Famcollector)
+                                    {                                        
+                                        string FamSymType = FamSym.Name;
+
+                                        if (famName == FamSym.FamilyName && fsName == FamSym.Name)
+                                        {
+                                            FamilySymbol ss = Utils.GetFamilySymbolByName(doc, famName, fsName);
+
+                                            if (ss != null)
+                                            {
+                                                if(ss.IsActive == false)
+                                                {
+                                                    ss.Activate();
+                                                }
+                                            }
+
+                                            families.Add(ss);
+
+                                        }
+                                    }
                                 }
+                                //locations can be a location point or curve, it depends what your using
+                                //use lookup to check which type of location the element has
+                                LocationPoint loc = room.Location as LocationPoint;
+                                XYZ roomPoint = loc.Point as XYZ;
+
+                                foreach (FamilySymbol Sym in families)
+                                {
+                                    FamilyInstance curFI = doc.Create.NewFamilyInstance(roomPoint, Sym, StructuralType.NonStructural);
+                                }
+                                
                             }
                         }
-                        //locations can be a location point or curve, it depends what your using
-                        //use lookup to check which type of location the element has
-                        LocationPoint loc = room.Location as LocationPoint;
-                        XYZ roomPoint = loc.Point as XYZ;
-
-                        foreach (FamilySymbol Sym in families)
-                        {
-                            FamilyInstance curFI = doc.Create.NewFamilyInstance(roomPoint, Sym, StructuralType.NonStructural);
-                        }
-
-
                     }
                 }
                 t.Commit();
@@ -200,7 +209,7 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 RoomType = _roomType;
                 IncludedFurnitureList = _includedFurnitureList;
             }
-
+            //michael set this not as a list but as a string and then pulled out the elements within the constructor of the class
             public int getIncFurnitureCount()
             {
                 return IncludedFurnitureList.Count;
