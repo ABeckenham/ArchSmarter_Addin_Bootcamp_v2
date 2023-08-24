@@ -66,7 +66,7 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             
             //!!!! GET ALL FURNITURE SETS
             //get furniture sets as array
-            IList<string[]> setArray = GetFurnitureSets();
+            List<string[]> setArray = GetFurnitureSets();
             //getting the furniture from the furniture types list. 
             setArray.RemoveAt(0);
             foreach (string[] fs in setArray)
@@ -82,10 +82,8 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 
                 string[] SArray = sList.Split(',');
                 
-                
                 List<FurnitureType> ZZlist = new List<FurnitureType>();
                 // build list of Furniture in string
-
                 foreach (string s in SArray)
                 {
                     foreach (FurnitureType XX in fTypeList) 
@@ -101,7 +99,6 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 //name of set, name of room, list of Furniture Names
                 FurnitureSet ZZ = new FurnitureSet(FuSet, roomType, ZZlist);
                 fSetList.Add(ZZ);
-
             }
 
             //!!! GET ALL ROOMS AND PLACE FURNITURE SET IN THE ROOM 
