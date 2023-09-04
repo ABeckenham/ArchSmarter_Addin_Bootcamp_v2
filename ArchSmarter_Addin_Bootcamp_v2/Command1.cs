@@ -33,14 +33,14 @@ namespace ArchSmarter_Addin_Bootcamp_v2
         {
             // use this method to define the properties for this command in the Revit ribbon
             string buttonInternalName = "btnCommand1";
-            string buttonTitle = "Button 1";
+            string buttonTitle = "Tool 4";
 
             ButtonDataClass myButtonData1 = new ButtonDataClass(
                 buttonInternalName,
                 buttonTitle,
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
-                Properties.Resources.Blue_32,
-                Properties.Resources.Blue_16,
+                Properties.Resources.icons8_drafting_compass_cute_color_32,
+                Properties.Resources.icons8_drafting_compass_cute_color_16,
                 "This is a tooltip for Button 1");
 
             return myButtonData1.Data;

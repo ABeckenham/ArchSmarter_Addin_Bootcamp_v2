@@ -113,15 +113,15 @@ namespace ArchSmarter_Addin_Bootcamp_v2
         internal static PushButtonData GetButtonData()
         {
             // use this method to define the properties for this command in the Revit ribbon
-            string buttonInternalName = "btnCommand1";
-            string buttonTitle = "Button 1";
+            string buttonInternalName = "btnMod01";
+            string buttonTitle = "Tool 1";
 
             ButtonDataClass myButtonData1 = new ButtonDataClass(
                 buttonInternalName,
                 buttonTitle,
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
-                Properties.Resources.Blue_32,
-                Properties.Resources.Blue_16,
+                Properties.Resources.icons8_paint_roller_cute_color_32,
+                Properties.Resources.icons8_paint_roller_cute_color_16,
                 "This is a tooltip for Button 1");
 
             return myButtonData1.Data;

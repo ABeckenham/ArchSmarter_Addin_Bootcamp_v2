@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ArchSmarter_Addin_Bootcamp_v2
 {
+    // add licensing and add users only in my company to be able to use it
     internal class CommandAvailability : IExternalCommandAvailability
     {
         public bool IsCommandAvailable(UIApplication applicationData, CategorySet selectedCategories)
