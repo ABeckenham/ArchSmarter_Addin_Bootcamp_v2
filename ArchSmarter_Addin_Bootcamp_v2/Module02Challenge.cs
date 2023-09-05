@@ -27,6 +27,11 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             // this is a variable for the current Revit model
             Document doc = uiapp.ActiveUIDocument.Document;
 
+            // module 02 - user-selects elements in view, then filters for line types
+            // depending on the line type will depend on what is created along the line
+            // a mixture of walls, ducts, and pipes. 
+
+
             // this is a variable to collect the current active document
             UIDocument uidoc = uiapp.ActiveUIDocument;
             IList<Element> pickList = uidoc.Selection.PickElementsByRectangle("Select Elements");

@@ -26,6 +26,10 @@ namespace ArchSmarter_Addin_Bootcamp_v2
             // this is a variable for the current Revit model
             Document doc = uiapp.ActiveUIDocument.Document;
 
+            // module 01 - creates 250 levels, at 15 feet height, and renames thems.
+            // then creates floorplans if divided by 3, ceiling plans if it divides by 5
+            // then if it is divided by both 3 and 5 it creates a sheet.
+
 
             //declare a number variable and set it to 250
             int num1 = 250;
