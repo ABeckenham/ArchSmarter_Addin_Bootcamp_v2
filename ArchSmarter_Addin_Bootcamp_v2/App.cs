@@ -59,8 +59,8 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 //main button does not change from the main one in the vertial list 
                 // pulldown container, add large and small images to it, add buttons
             PulldownButtonData pulldownData = new PulldownButtonData("Pulldown1", "More Tools");
-            pulldownData.LargeImage = ButtonDataClass.BitmapToImageSource(Properties.Resources.icons8_tools_cute_color_32);
-            pulldownData.Image = ButtonDataClass.BitmapToImageSource(Properties.Resources.icons8_tools_cute_color_16);
+            pulldownData.LargeImage = ButtonDataClass.BitmapToImageSource(Properties.Resources.icons8_tools_cute_color_3296);
+            pulldownData.Image = ButtonDataClass.BitmapToImageSource(Properties.Resources.icons8_tools_cute_color_1696);
                 //create pulldown button, reference the panel, add data to it. create buttons
             PulldownButton pulldownButton = panel.AddItem(pulldownData) as PulldownButton;
             pulldownButton.AddPushButton(btnData1);

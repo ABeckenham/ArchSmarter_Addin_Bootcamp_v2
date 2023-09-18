@@ -39,8 +39,8 @@ namespace ArchSmarter_Addin_Bootcamp_v2
                 buttonInternalName,
                 buttonTitle,
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
-                Properties.Resources.icons8_drafting_compass_cute_color_32,
-                Properties.Resources.icons8_drafting_compass_cute_color_16,
+                Properties.Resources.icons8_drafting_compass_cute_color_3296,
+                Properties.Resources.icons8_drafting_compass_cute_color_1696,
                 "This is a tooltip for Button 1");
 
             return myButtonData1.Data;

@@ -103,9 +103,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_drafting_compass_cute_color_16 {
+        internal static System.Drawing.Bitmap icons8_drafting_compass_cute_color_1696 {
             get {
-                object obj = ResourceManager.GetObject("icons8_drafting_compass_cute_color_16", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_drafting_compass_cute_color_1696", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_drafting_compass_cute_color_32 {
+        internal static System.Drawing.Bitmap icons8_drafting_compass_cute_color_3296 {
             get {
-                object obj = ResourceManager.GetObject("icons8_drafting_compass_cute_color_32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_drafting_compass_cute_color_3296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_hammer_cute_color_16 {
+        internal static System.Drawing.Bitmap icons8_hammer_cute_color_1696 {
             get {
-                object obj = ResourceManager.GetObject("icons8_hammer_cute_color_16", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_hammer_cute_color_1696", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_hammer_cute_color_32 {
+        internal static System.Drawing.Bitmap icons8_hammer_cute_color_3296 {
             get {
-                object obj = ResourceManager.GetObject("icons8_hammer_cute_color_32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_hammer_cute_color_3296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_paint_roller_cute_color_16 {
+        internal static System.Drawing.Bitmap icons8_paint_roller_cute_color_1696 {
             get {
-                object obj = ResourceManager.GetObject("icons8_paint_roller_cute_color_16", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_paint_roller_cute_color_1696", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_paint_roller_cute_color_32 {
+        internal static System.Drawing.Bitmap icons8_paint_roller_cute_color_3296 {
             get {
-                object obj = ResourceManager.GetObject("icons8_paint_roller_cute_color_32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_paint_roller_cute_color_3296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_scissors_cute_color_16 {
+        internal static System.Drawing.Bitmap icons8_scissors_cute_color_1696 {
             get {
-                object obj = ResourceManager.GetObject("icons8_scissors_cute_color_16", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_scissors_cute_color_1696", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_scissors_cute_color_32 {
+        internal static System.Drawing.Bitmap icons8_scissors_cute_color_3296 {
             get {
-                object obj = ResourceManager.GetObject("icons8_scissors_cute_color_32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_scissors_cute_color_3296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_swiss_army_knife_cute_color_16 {
+        internal static System.Drawing.Bitmap icons8_swiss_army_knife_cute_color_1696 {
             get {
-                object obj = ResourceManager.GetObject("icons8_swiss_army_knife_cute_color_16", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_swiss_army_knife_cute_color_1696", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_swiss_army_knife_cute_color_32 {
+        internal static System.Drawing.Bitmap icons8_swiss_army_knife_cute_color_3296 {
             get {
-                object obj = ResourceManager.GetObject("icons8_swiss_army_knife_cute_color_32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_swiss_army_knife_cute_color_3296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_tools_cute_color_16 {
+        internal static System.Drawing.Bitmap icons8_tools_cute_color_1696 {
             get {
-                object obj = ResourceManager.GetObject("icons8_tools_cute_color_16", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_tools_cute_color_1696", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace ArchSmarter_Addin_Bootcamp_v2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_tools_cute_color_32 {
+        internal static System.Drawing.Bitmap icons8_tools_cute_color_3296 {
             get {
-                object obj = ResourceManager.GetObject("icons8_tools_cute_color_32", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_tools_cute_color_3296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

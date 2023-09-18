@@ -213,18 +213,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ArchSmarter_Addin_Bootcamp_v2.addin" />
-    <EmbeddedResource Include="Resources\icons8-hammer-cute-color-16.png" />
-    <EmbeddedResource Include="Resources\icons8-hammer-cute-color-32.png" />
-    <EmbeddedResource Include="Resources\icons8-tools-cute-color-32.png" />
-    <EmbeddedResource Include="Resources\icons8-tools-cute-color-16.png" />
-    <EmbeddedResource Include="Resources\icons8-drafting-compass-cute-color-32.png" />
-    <EmbeddedResource Include="Resources\icons8-drafting-compass-cute-color-16.png" />
-    <EmbeddedResource Include="Resources\icons8-swiss-army-knife-cute-color-32.png" />
-    <EmbeddedResource Include="Resources\icons8-swiss-army-knife-cute-color-16.png" />
-    <EmbeddedResource Include="Resources\icons8-scissors-cute-color-32.png" />
-    <EmbeddedResource Include="Resources\icons8-scissors-cute-color-16.png" />
-    <EmbeddedResource Include="Resources\icons8-paint-roller-cute-color-32.png" />
-    <EmbeddedResource Include="Resources\icons8-paint-roller-cute-color-16.png" />
+    <EmbeddedResource Include="Resources\icons8-swiss-army-knife-cute-color-1696.png" />
+    <EmbeddedResource Include="Resources\icons8-scissors-cute-color-3296.png" />
+    <EmbeddedResource Include="Resources\icons8-scissors-cute-color-1696.png" />
+    <EmbeddedResource Include="Resources\icons8-paint-roller-cute-color-3296.png" />
+    <EmbeddedResource Include="Resources\icons8-paint-roller-cute-color-1696.png" />
+    <EmbeddedResource Include="Resources\icons8-hammer-cute-color-3296.png" />
+    <EmbeddedResource Include="Resources\icons8-hammer-cute-color-1696.png" />
+    <EmbeddedResource Include="Resources\icons8-drafting-compass-cute-color-3296.png" />
+    <EmbeddedResource Include="Resources\icons8-drafting-compass-cute-color-1696.png" />
+    <EmbeddedResource Include="Resources\icons8-tools-cute-color-3296.png" />
+    <EmbeddedResource Include="Resources\icons8-tools-cute-color-1696.png" />
+    <EmbeddedResource Include="Resources\icons8-swiss-army-knife-cute-color-3296.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
