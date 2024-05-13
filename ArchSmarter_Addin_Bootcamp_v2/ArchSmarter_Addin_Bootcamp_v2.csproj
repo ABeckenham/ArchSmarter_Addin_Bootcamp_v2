@@ -180,6 +180,9 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="CmdEPPlus.cs" />
+    <Compile Include="Forms\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Module03Challenge.cs" />
     <Compile Include="Command1.cs" />
     <Compile Include="Module01Challenge.cs" />
@@ -257,6 +260,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Forms\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
